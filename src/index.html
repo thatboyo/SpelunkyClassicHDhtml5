@@ -32,5 +32,17 @@
         }
     </script>
     -->
+    <script>
+window.addEventListener('keydown', (e) => {
+    // Pressing '9' as a trigger (easier than Search+Refresh)
+    if (e.key === '9') {
+        // This works if the GameMaker runner exposes global variables
+        if (typeof g_pPlayer !== 'undefined') {
+            g_pPlayer.hp = 99;
+            console.log("Health set to 99");
+        }
+    }
+});
+</script>
 </body>
 </html>
